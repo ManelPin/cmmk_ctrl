@@ -152,11 +152,11 @@ MainWindow::MainWindow(struct cmmk* dev, QWidget* parent) :
     });
 
     _keyboardWidget = new KeyboardWidget{
-        _dev->layout_type == CMMK_LAYOUT_TYPE_ISO
+        _dev->layout == CMMK_LAYOUT_TYPE_ISO
             ? KeyboardLayout::ISO
             : KeyboardLayout::ANSI,
 
-        _dev->product_type == CMMK_PRODUCT_MASTERKEYS_PRO_S
+        _dev->product == CMMK_PRODUCT_MASTERKEYS_PRO_S
             ? KeyboardStyle::TKL
             : KeyboardStyle::Normal,
 
